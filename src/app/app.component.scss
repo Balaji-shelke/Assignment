@@ -1,0 +1,135 @@
+.main {
+  width: 100%;
+}
+
+.btn {
+  width: 100px;
+  height: 28px;
+  background: #7057f1;
+  border: 1px solid rgba(117, 100, 227, 0.4);
+  color: white;
+  position: relative;
+  left: 124px;
+  top: 30px;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 25px;
+}
+
+input[type="text"] {
+  padding: 9px 80px;
+  border: 5px solid #ccc;
+  border-radius: 37px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0px;
+  right: 97px;
+  top: 23px;
+}
+
+@media (max-width: 768px) {
+  .search {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 9px 20px;
+    margin-bottom: 10px;
+    position: relative;
+    right: auto;
+    left: auto;
+    top: auto;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 200px;
+    left: auto;
+    top: auto;
+    margin: 28px 99px;
+  }
+}
+
+
+
+/* Desktop View */
+.editbtn {
+  background: #7057f1;
+  border: 1px solid rgba(117, 100, 227, 0.4);
+  margin: 3px;
+  cursor: pointer;
+}
+
+.deletebtn {
+  background: #c40808;
+  border: 1px solid rgba(174, 48, 48, 0.4);
+  cursor: pointer;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+  border-radius: 40px;
+  border: 1px solid;
+  margin: 0px 5px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-footer {
+  padding: 10px;
+  display: flex;
+  margin: 1px 76px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h2 {
+  margin: 0 16px;
+}

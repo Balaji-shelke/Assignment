@@ -1,0 +1,11 @@
+<div *ngIf="data.editMode">
+  <form [formGroup]="data.editForm" (ngSubmit)="onSaveClick()">
+    <input type="text" formControlName="name" placeholder="Name">
+    <input type="email" formControlName="email" placeholder="Email">
+    <!-- <input type="text" formControlName="avatar" placeholder="Avatar URL"> -->
+    <input type="date" formControlName="dateOfBirth" placeholder="Date of Birth">
+    <input type="text" formControlName="country" placeholder="country">
+    <button class="addbtn" type="submit">Save</button>
+    <button class="closebtn" type="button" (click)="onCancelClick()">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,82 @@
+/* Desktop Styles */
+@media only screen and (min-width: 768px) {
+  /* Adjust form layout */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 104px 0px;
+  }
+
+  /* Adjust input fields */
+  input {
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  /* Adjust buttons */
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    // background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+   
+  }
+  .addbtn{
+    background-color: #7057f1;
+    border: 1px solid rgba(117, 100, 227, 0.4); 
+  }
+  .closebtn{
+    background-color: #c40808;
+    border: 1px solid rgba(174, 48, 48, 0.4);
+  }
+
+  /* Adjust form layout for buttons */
+  button[type="submit"], button[type="button"] {
+    margin-top: 10px;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+  /* Adjust input fields */
+  input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  /* Adjust buttons */
+  button {
+    width: calc(50% - 5px);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    // background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    
+  }
+  .addbtn{
+    background-color: #7057f1;
+    border: 1px solid rgba(117, 100, 227, 0.4); 
+  }
+  .closebtn{
+    background-color: #c40808;
+    border: 1px solid rgba(174, 48, 48, 0.4);
+  }
+
+  /* Adjust form layout for buttons */
+  button[type="submit"], button[type="button"] {
+    margin-top: 10px;
+  }
+ 
+}

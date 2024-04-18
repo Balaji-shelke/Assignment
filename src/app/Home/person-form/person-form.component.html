@@ -1,0 +1,50 @@
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+    <div *ngIf="personForm.get('name')?.invalid && personForm.get('name')?.touched" class="error">
+      Name is required
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+    <div *ngIf="personForm.get('email')?.invalid && personForm.get('email')?.touched" class="error">
+      Email is required and must be valid
+    </div>
+  </div>
+
+  <div>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" formControlName="dateOfBirth">
+    <div *ngIf="personForm.get('dob')?.invalid && personForm.get('dateOfBirth')?.touched" class="error">
+      Date of Birth is required
+    </div>
+  </div>
+
+  <!-- <div>
+      <label for="avatar">Avatar:</label>
+      <input type="text" id="avatar" formControlName="avatar">
+      <div *ngIf="personForm.get('avatar')?.invalid && personForm.get('avatar')?.touched" class="error">
+        Avatar is required
+      </div>
+    </div> -->
+  <div>
+    <label for="avatar">Avatar:</label>
+    <input type="file" id="avatar" (change)="onAvatarSelected($event)" accept="image/*">
+    <div *ngIf="avatarInvalid && avatarTouched" class="error">
+      Avatar is required
+    </div>
+  </div>
+  <div>
+    <label for="country">Country:</label>
+    <input type="text" id="country" formControlName="country">
+    <div *ngIf="personForm.get('country')?.invalid && personForm.get('country')?.touched" class="error">
+      Country is required
+    </div>
+  </div>
+
+  <button class="addbtn" type="submit">Add Person</button>
+  <button class="closetebtn" (click)="cancel()">Close</button>
+</form>

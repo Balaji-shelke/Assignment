@@ -1,0 +1,28 @@
+<div class="main">
+
+  <button class="btn" (click)="openPersonCard()">Add Person</button>
+  <div class="search">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search by name">
+
+  </div>
+
+  <div class="card-container">
+    <div class="card" *ngFor="let person of people | filterByName: searchTerm; let i = index">
+      <div class="card-header">
+        <!-- Avatar Binding here -->
+        <img src="../assets/icon.svg" alt="Avatar">
+        <h2>{{ person?.name }}</h2>
+      </div>
+      <div class="card-body">
+        <p><strong>Email:</strong> {{ person?.email }}</p>
+        <p><strong>Age:</strong> {{ person?.dateOfBirth | calculateAge }}</p>
+        <p><strong>Country:</strong> {{ person?.country }}</p>
+      </div>
+      <div class="card-footer">
+        <button class='editbtn' (click)="editPerson(i)">Edit</button>
+        <button class='deletebtn' (click)="DeletePerson(i)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+</div>
