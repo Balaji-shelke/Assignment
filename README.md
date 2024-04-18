@@ -1,4 +1,9 @@
 # Assignment
+For START This Follow This Command
+1 `npm install`
+2 ` npm run server`
+3 ` ng s`
+PLEASE Follow Above Commands
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
